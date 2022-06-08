@@ -32,7 +32,7 @@ namespace sales_leads.Controllers
             {
                 To = "14252246702",
                 From = "18335787280",
-                Text = $"New lead acquired:\nName:{name}\nPhone:{phone}\nMessage:{message}"
+                Text = $"New lead acquired!\n\nName: {name}\nPhone: {phone}\nMessage: {message}"
             });
 
             if (response != null && Convert.ToInt32(response.MessageCount) > 0 && response.Messages[0].StatusCode.ToString() == "Success")
