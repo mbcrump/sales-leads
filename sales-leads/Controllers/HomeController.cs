@@ -30,18 +30,18 @@ namespace sales_leads.Controllers
 
             var response = VonageClient.SmsClient.SendAnSms(new Vonage.Messaging.SendSmsRequest()
             {
-                To = "14253820339",
+                To = "14252246702",
                 From = "18335787280",
                 Text = $"New lead acquired:\nName:{name}\nPhone:{phone}\nMessage:{message}"
             });
 
             if (response != null && Convert.ToInt32(response.MessageCount) > 0 && response.Messages[0].StatusCode.ToString() == "Success")
             {
-                lead.Result = "Success";
+                lead.Result = "Message sent successfully! An agent will contact you shortly.";
             }
             else
             {
-                lead.Result = "Failure";
+                lead.Result = "Message Failure. Please try your request again. ";
             }
             
             return View(lead);
