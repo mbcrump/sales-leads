@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Vereyon.Web.FlashMessage" Version="3.0.0" />
     <PackageReference Include="Vonage" Version="5.10.0" />
   </ItemGroup>
 
